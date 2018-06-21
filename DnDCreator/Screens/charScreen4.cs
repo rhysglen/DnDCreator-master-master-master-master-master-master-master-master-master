@@ -137,8 +137,6 @@ namespace DnDCreator.Screens
                 primary2Button.Enabled = true;
                 second1Button.Enabled = true;
                 second1Button.Visible = true;
-                primary3Button.Enabled = true;
-                primary3Button.Visible = true;
                 other1Button.Visible = true;
                 other1Button.Enabled = true;
                 other2Button.Visible = true;
@@ -182,30 +180,152 @@ namespace DnDCreator.Screens
             }
             else if (Form1.newCharacter.type == "Paladin")
             {
+                primary1Button.Enabled = true;
+                primary1Button.Visible = true;
+                second2Button.Visible = true;
+                second2Button.Enabled = true;
+                primary2Button.Visible = true;
+                primary2Button.Enabled = true;
+                second1Button.Enabled = true;
+                second1Button.Visible = true;
+                other1Button.Visible = true;
+                other1Button.Enabled = true;
+                other2Button.Visible = true;
+                other2Button.Enabled = true;
+                
+                primary1Button.Text = "A Martial Weapon + Shield";
+                primary2Button.Text = "Two Martial Weapons";
 
+                second1Button.Text = "5 Javelin";
+                second2Button.Text = "Any Simple weapon";
+                
+                other1Button.Text = "Priest's Pack";
+                other2Button.Text = "An Explorer's Pack";
 
             }
             else if (Form1.newCharacter.type == "Ranger")
             {
+                primary1Button.Enabled = true;
+                primary1Button.Visible = true;
+                armor2Button.Visible = true;
+                armor2Button.Enabled = true;
+                primary2Button.Visible = true;
+                primary2Button.Enabled = true;
+                armor1Button.Enabled = true;
+                armor1Button.Visible = true;
+                other1Button.Visible = true;
+                other1Button.Enabled = true;
+                other2Button.Visible = true;
+                other2Button.Enabled = true;
+               
+               primary1Button.Text = "2 Shortsword";
+                primary2Button.Text = "Two Simple Melee Weapons";
 
+                armor1Button.Text = "Scale Mail";
+                armor2Button.Text = "Leather Armor";
 
+                other1Button.Text = "Dungeoneer's Pack";
+                other2Button.Text = "An Explorer's Pack";
             }
             else if (Form1.newCharacter.type == "Rogue")
             {
+                primary1Button.Enabled = true;
+                primary1Button.Visible = true;
+                second2Button.Visible = true;
+                second2Button.Enabled = true;
+                primary2Button.Visible = true;
+                primary2Button.Enabled = true;
+                second1Button.Enabled = true;
+                second1Button.Visible = true;
+                other1Button.Visible = true;
+                other1Button.Enabled = true;
+                other2Button.Visible = true;
+                other2Button.Enabled = true;
+                other3Button.Visible = true;
+                other3Button.Enabled = true;
+                
+                primary1Button.Text = "A Rapier";
+                primary2Button.Text = "A Shortsword";
 
+                second1Button.Text = "Shortbow";
+                second2Button.Text = "A Shortsword";
+                
+                other1Button.Text = "Burglar's Pack";
+                other2Button.Text = "A Dungeoneer's Pack";
+                other3Button.Text = "An Explorer's Pack";
             }
             else if (Form1.newCharacter.type == "Sorcerer")
             {
+                primary1Button.Enabled = true;
+                primary1Button.Visible = true;
+                second2Button.Visible = true;
+                second2Button.Enabled = true;
+                primary2Button.Visible = true;
+                primary2Button.Enabled = true;
+                second1Button.Enabled = true;
+                second1Button.Visible = true;
+                other1Button.Visible = true;
+                other1Button.Enabled = true;
+                other2Button.Visible = true;
+                other2Button.Enabled = true;
+                
+                primary1Button.Text = "A Light Crossbow";
+                primary2Button.Text = "Any Simple Weapon";
 
+                second1Button.Text = "Arcane Focus";
+                second2Button.Text = "Component Pounch";
+                
+                other1Button.Text = "A Dungeoneer's Pack";
+                other2Button.Text = "An Explorer's Pack";
 
             }
             else if (Form1.newCharacter.type == "Warlock")
             {
+                primary1Button.Enabled = true;
+                primary1Button.Visible = true;
+                second2Button.Visible = true;
+                second2Button.Enabled = true;
+                primary2Button.Visible = true;
+                primary2Button.Enabled = true;
+                second1Button.Enabled = true;
+                second1Button.Visible = true;
+                other1Button.Visible = true;
+                other1Button.Enabled = true;
+                other2Button.Visible = true;
+                other2Button.Enabled = true;
+                
+                primary1Button.Text = "A Light Crossbow";
+                primary2Button.Text = "Any Simple Weapon";
 
+                second1Button.Text = "Arcane Focus";
+                second2Button.Text = "Component Pounch";
+                
+                other1Button.Text = "A Dungeoneer's Pack";
+                other2Button.Text = "An Scholar's Pack";
             }
             else if (Form1.newCharacter.type == "Wizard")
             {
+                primary1Button.Enabled = true;
+                primary1Button.Visible = true;
+                second2Button.Visible = true;
+                second2Button.Enabled = true;
+                primary2Button.Visible = true;
+                primary2Button.Enabled = true;
+                second1Button.Enabled = true;
+                second1Button.Visible = true;
+                other1Button.Visible = true;
+                other1Button.Enabled = true;
+                other2Button.Visible = true;
+                other2Button.Enabled = true;
+                
+                primary1Button.Text = "A Quarterstaff";
+                primary2Button.Text = "A Dagger";
 
+                second1Button.Text = "Arcane Focus";
+                second2Button.Text = "Component Pounch";
+                
+                other1Button.Text = "An Explorer 's Pack";
+                other2Button.Text = "A Scholar's Pack";
             }
 
         }
@@ -261,7 +381,28 @@ namespace DnDCreator.Screens
             {
                 Form1.newCharacter.weapon.Add(shortsword);
             }
+             else if (primary1Button.Checked && Form1.newCharacter.type == "Sorcerer")
+            {
+                Form1.newCharacter.weapon.Add(lightCB);
+                Form1.newCharacter.equipment.Add("20 Bolts");
+                
+            }
+            else if (primary1Button.Checked && Form1.newCharacter.type == "Warlock")
+            {
+                Form1.newCharacter.weapon.Add(lightCB);
+                Form1.newCharacter.equipment.Add("20 Bolts");
+                
+            }
+             else if (primary1Button.Checked && Form1.newCharacter.type == "Ranger")
+            {
+                Form1.newCharacter.weapon.Add(shortsword);
+                Form1.newCharacter.weapon.Add(shortsword);
+            }
             else if (primary1Button.Checked && Form1.newCharacter.type == "Bard")
+            {
+                Form1.newCharacter.weapon.Add(rapier);
+            }
+              else if (primary1Button.Checked && Form1.newCharacter.type == "Rogue")
             {
                 Form1.newCharacter.weapon.Add(rapier);
             }
@@ -269,11 +410,41 @@ namespace DnDCreator.Screens
             {
                 Form1.newCharacter.weapon.Add(mace);
             }
+            else if (primary1Button.Checked && Form1.newCharacter.type == "Wizard")
+            {
+                Form1.newCharacter.weapon.Add(quarterstaff);
+            }
             else if (primary1Button.Checked && Form1.newCharacter.type == "Druid")
             {
                 Form1.newCharacter.equipment.Add("Wooden Shield");
             }
             else if (primary1Button.Checked && Form1.newCharacter.type == "Fighter")
+            {
+                Form1.newCharacter.equipment.Add("Shield");
+
+                primary1Box.Enabled = true;
+                primary1Box.Visible = true;
+                primary1Box.Items.Add("Flail");
+                primary1Box.Items.Add("Glaive");
+                primary1Box.Items.Add("Battleaxe");
+                primary1Box.Items.Add("Greatsword");
+                primary1Box.Items.Add("Halberd");
+                primary1Box.Items.Add("Lance");
+                primary1Box.Items.Add("Longsword");
+                primary1Box.Items.Add("Maul");
+                primary1Box.Items.Add("Morningstar");
+                primary1Box.Items.Add("Pike");
+                primary1Box.Items.Add("Rapier");
+                primary1Box.Items.Add("Scimitar");
+                primary1Box.Items.Add("Shortsword");
+                primary1Box.Items.Add("Trident");
+                primary1Box.Items.Add("War Pick");
+                primary1Box.Items.Add("Warhammer");
+                primary1Box.Items.Add("Whip");
+
+
+            }
+                 else if (primary1Button.Checked && Form1.newCharacter.type == "Paladin")
             {
                 Form1.newCharacter.equipment.Add("Shield");
 
@@ -355,15 +526,92 @@ namespace DnDCreator.Screens
 
 
             }
+              else if (primary2Button.Checked && Form1.newCharacter.type == "Paladin")
+            {
+               
+
+                primary2Box.Enabled = true;
+                primary2Box.Visible = true;
+
+                primary2Box.Items.Add("Flail");
+                primary2Box.Items.Add("Glaive");
+                primary2Box.Items.Add("Battleaxe");
+                primary2Box.Items.Add("Greatsword");
+                primary2Box.Items.Add("Halberd");
+                primary2Box.Items.Add("Lance");
+                primary2Box.Items.Add("Longsword");
+                primary2Box.Items.Add("Maul");
+                primary2Box.Items.Add("Morningstar");
+                primary2Box.Items.Add("Pike");
+                primary2Box.Items.Add("Rapier");
+                primary2Box.Items.Add("Scimitar");
+                primary2Box.Items.Add("Shortsword");
+                primary2Box.Items.Add("Trident");
+                primary2Box.Items.Add("War Pick");
+                primary2Box.Items.Add("Warhammer");
+                primary2Box.Items.Add("Whip");
+
+
+            }
             else if (primary2Button.Checked && Form1.newCharacter.type == "Bard")
             {
                 Form1.newCharacter.weapon.Add(longsword);
+            }
+             else if (primary2Button.Checked && Form1.newCharacter.type == "Rogue")
+            {
+                Form1.newCharacter.weapon.Add(shortsword);
             }
             else if (primary2Button.Checked && Form1.newCharacter.type == "Cleric")
             {
                 Form1.newCharacter.weapon.Add(warhammer);
             }
+            else if (primary2Button.Checked && Form1.newCharacter.type == "Wizard")
+            {
+                Form1.newCharacter.weapon.Add(dagger);
+            }
             else if (primary2Button.Checked && Form1.newCharacter.type == "Druid")
+            {
+                primary2Box.Visible = true;
+                primary2Box.Enabled = true;
+
+                primary2Box.Items.Add("Club");
+                primary2Box.Items.Add("Dagger");
+                primary2Box.Items.Add("Greatclub");
+                primary2Box.Items.Add("Handaxe");
+                primary2Box.Items.Add("Javelin");
+                primary2Box.Items.Add("Light Hammer");
+                primary2Box.Items.Add("Mace");
+                primary2Box.Items.Add("Quarterstaff");
+                primary2Box.Items.Add("Sickle");
+                primary2Box.Items.Add("Spear");
+                primary2Box.Items.Add("Rapier");
+                primary2Box.Items.Add("Light Crossbow");
+                primary2Box.Items.Add("Dart");
+                primary2Box.Items.Add("Shortbow");
+                primary2Box.Items.Add("Sling");
+            }
+            else if (primary2Button.Checked && Form1.newCharacter.type == "Sorcerer")
+            {
+                primary2Box.Visible = true;
+                primary2Box.Enabled = true;
+
+                primary2Box.Items.Add("Club");
+                primary2Box.Items.Add("Dagger");
+                primary2Box.Items.Add("Greatclub");
+                primary2Box.Items.Add("Handaxe");
+                primary2Box.Items.Add("Javelin");
+                primary2Box.Items.Add("Light Hammer");
+                primary2Box.Items.Add("Mace");
+                primary2Box.Items.Add("Quarterstaff");
+                primary2Box.Items.Add("Sickle");
+                primary2Box.Items.Add("Spear");
+                primary2Box.Items.Add("Rapier");
+                primary2Box.Items.Add("Light Crossbow");
+                primary2Box.Items.Add("Dart");
+                primary2Box.Items.Add("Shortbow");
+                primary2Box.Items.Add("Sling");
+            }
+              else if (primary2Button.Checked && Form1.newCharacter.type == "Warlock")
             {
                 primary2Box.Visible = true;
                 primary2Box.Enabled = true;
@@ -404,6 +652,23 @@ namespace DnDCreator.Screens
                 primary2Box.Items.Add("Dart");
                 primary2Box.Items.Add("Shortbow");
                 primary2Box.Items.Add("Sling");
+            }
+               else if (primary2Button.Checked && Form1.newCharacter.type == "Ranger")
+            {
+                primary2Box.Visible = true;
+                primary2Box.Enabled = true;
+
+                primary2Box.Items.Add("Club");
+                primary2Box.Items.Add("Dagger");
+                primary2Box.Items.Add("Greatclub");
+                primary2Box.Items.Add("Handaxe");
+                primary2Box.Items.Add("Javelin");
+                primary2Box.Items.Add("Light Hammer");
+                primary2Box.Items.Add("Mace");
+                primary2Box.Items.Add("Quarterstaff");
+                primary2Box.Items.Add("Sickle");
+                primary2Box.Items.Add("Spear");
+                primary2Box.Items.Add("Rapier");
             }
         }
 
@@ -449,6 +714,10 @@ namespace DnDCreator.Screens
                      Form1.newCharacter.weapon.Add(lightCB);
 
                 }
+                else if (second1Button.Checked && Form1.newCharacter.type == "Palidin")
+                {                 
+                     weapons javelinx5 = new weapons("Javelin X5", Form1.newCharacter.strMod + Form1.newCharacter.proficiency, "1d6 Piercing");
+                }
             else if (second1Button.Checked && Form1.newCharacter.type == "Druid")
             {
                 Form1.newCharacter.weapon.Add(scimitar);
@@ -458,8 +727,25 @@ namespace DnDCreator.Screens
                 Form1.newCharacter.weapon.Add(lightCB);
                 Form1.newCharacter.equipment.Add("Bolts x20");
             }
-
-
+               else if (second1Button.Checked && Form1.newCharacter.type == "Rogue")
+            {
+                Form1.newCharacter.weapon.Add(shortbow);
+                Form1.newCharacter.equipment.Add("Arrows x20");
+            }
+                 else if (second1Button.Checked && Form1.newCharacter.type == "Sorcerer")
+            {
+                Form1.newCharacter.equipment.Add("Arcane Focus");
+            }
+                else if (second1Button.Checked && Form1.newCharacter.type == "Warlock")
+            {
+                Form1.newCharacter.equipment.Add("Arcane Focus");
+            }
+                else if (second1Button.Checked && Form1.newCharacter.type == "Wizard")
+            {
+                Form1.newCharacter.equipment.Add("Arcane Focus");
+            }
+        }
+        }
         }
 
         private void second2Button_CheckedChanged(object sender, EventArgs e)
@@ -509,6 +795,28 @@ namespace DnDCreator.Screens
                 second2Box.Items.Add("Sling");
 
             }
+              else if (second2Button.Checked && Form1.newCharacter.type == "Paladin")
+            {
+                second2Box.Visible = true;
+                second2Box.Enabled = true;
+
+                second2Box.Items.Add("Club");
+                second2Box.Items.Add("Dagger");
+                second2Box.Items.Add("Greatclub");
+                second2Box.Items.Add("Handaxe");
+                second2Box.Items.Add("Javelin");
+                second2Box.Items.Add("Light Hammer");
+                second2Box.Items.Add("Mace");
+                second2Box.Items.Add("Quarterstaff");
+                second2Box.Items.Add("Sickle");
+                second2Box.Items.Add("Spear");
+                second2Box.Items.Add("Rapier");
+                second2Box.Items.Add("Light Crossbow");
+                second2Box.Items.Add("Dart");
+                second2Box.Items.Add("Shortbow");
+                second2Box.Items.Add("Sling");
+
+            }
             else if (second2Button.Checked && Form1.newCharacter.type == "Fighter")
             {
                 Form1.newCharacter.weapon.Add(handaxe);
@@ -518,6 +826,18 @@ namespace DnDCreator.Screens
             else if (second2Button.Checked && Form1.newCharacter.type == "Bard")
             {
                 Form1.newCharacter.equipment.Add("Explorer's Pack");
+            }
+              else if (second2Button.Checked && Form1.newCharacter.type == "Sorcerer")
+            {
+                Form1.newCharacter.equipment.Add("Component Pounch");
+            }
+              else if (second2Button.Checked && Form1.newCharacter.type == "Warlock")
+            {
+                Form1.newCharacter.equipment.Add("Component Pounch");
+            }
+              else if (second2Button.Checked && Form1.newCharacter.type == "Wizard")
+            {
+                Form1.newCharacter.equipment.Add("Component Pounch");
             }
             else if (second2Button.Checked && Form1.newCharacter.type == "Druid")
             {
@@ -549,6 +869,10 @@ namespace DnDCreator.Screens
                 {
                 Form1.newCharacter.equipment.Add("Chain Mail");
                 }
+                else if (armor1Button.Checked && Form1.newCharacter.type == "Ranger")
+                {
+                Form1.newCharacter.equipment.Add("Scale Mail");
+                }
             }
 
             private void armor2Button_CheckedChanged(object sender, EventArgs e)
@@ -558,6 +882,10 @@ namespace DnDCreator.Screens
                 Form1.newCharacter.equipment.Add("Leather Armor");
                 Form1.newCharacter.weapon.Add(longbow);
                 Form1.newCharacter.equipment.Add("Arrows x20");
+            }
+             elseb if (armor2Button.Checked && Form1.newCharacter.type == "Ranger")
+            {
+                Form1.newCharacter.equipment.Add("Leather Armor");
             }
         }
 
@@ -573,10 +901,39 @@ namespace DnDCreator.Screens
             {
                 Form1.newCharacter.equipment.Add("Priest's Pack");
             }
-
+            
+             else if (other1Button.Checked && Form1.newCharacter.type == "Rogue")
+            {
+                Form1.newCharacter.equipment.Add("Buglars's Pack");
+            }
+            else if (other1Button.Checked && Form1.newCharacter.type == "Paladin")
+            {
+                Form1.newCharacter.equipment.Add("Priest's Pack");
+            }
+    
             else if (other1Button.Checked && Form1.newCharacter.type == "Fighter")
             {
                 Form1.newCharacter.equipment.Add("Dungeoneer's Pack");
+            }
+             else if (other1Button.Checked && Form1.newCharacter.type == "Monk")
+            {
+                Form1.newCharacter.equipment.Add("Dungeoneer's Pack");
+            }
+              else if (other1Button.Checked && Form1.newCharacter.type == "Ranger")
+            {
+                Form1.newCharacter.equipment.Add("Dungeoneer's Pack");
+            }
+              else if (other1Button.Checked && Form1.newCharacter.type == "Sorcerer")
+            {
+                Form1.newCharacter.equipment.Add("Dungeoneer's Pack");
+            }
+              else if (other1Button.Checked && Form1.newCharacter.type == "Warlock")
+            {
+                Form1.newCharacter.equipment.Add("Scholar's Pack");
+            }
+              else if (other1Button.Checked && Form1.newCharacter.type == "Wizard")
+            {
+                Form1.newCharacter.equipment.Add("Scholar's Pack");
             }
         }
 
@@ -591,7 +948,35 @@ namespace DnDCreator.Screens
             {
                 Form1.newCharacter.equipment.Add("Explorer's Pack");
             }
+                else if (other2Button.Checked && Form1.newCharacter.type == "Fighter")
+            {
+                Form1.newCharacter.equipment.Add("Dungeoneers's Pack");
+            }
+               else if (other2Button.Checked && Form1.newCharacter.type == "Warlock")
+            {
+                Form1.newCharacter.equipment.Add("Dungeoneers's Pack");
+            }
+             else if (other2Button.Checked && Form1.newCharacter.type == "Paladin")
+            {
+                Form1.newCharacter.equipment.Add("Explorer's Pack");
+            }
+                  else if (other2Button.Checked && Form1.newCharacter.type == "Wizard")
+            {
+                Form1.newCharacter.equipment.Add("Explorer's Pack");
+            }
             else if (other2Button.Checked && Form1.newCharacter.type == "Cleric")
+            {
+                Form1.newCharacter.equipment.Add("Explorer's Pack");
+            }
+             else if (other2Button.Checked && Form1.newCharacter.type == "Sorcerer")
+            {
+                Form1.newCharacter.equipment.Add("Explorer's Pack");
+            }
+             else if (other2Button.Checked && Form1.newCharacter.type == "Monk")
+            {
+                Form1.newCharacter.equipment.Add("Explorer's Pack");
+            }
+              else if (other2Button.Checked && Form1.newCharacter.type == "Ranger")
             {
                 Form1.newCharacter.equipment.Add("Explorer's Pack");
             }
@@ -600,7 +985,10 @@ namespace DnDCreator.Screens
 
         private void other3Button_CheckedChanged(object sender, EventArgs e)
             {
-
+                 else if (other3Button.Checked && Form1.newCharacter.type == "Rogue")
+                {
+                     Form1.newCharacter.equipment.Add("Explorer's Pack");
+                }
             }
 
         private void weapButtonNext_Click(object sender, EventArgs e)
@@ -618,6 +1006,16 @@ namespace DnDCreator.Screens
                 Form1.newCharacter.clickedWeapons.Add(primary3Box.Text);
             }
             else if (primary2Button.Checked && Form1.newCharacter.type == "Fighter")
+            {
+                Form1.newCharacter.clickedWeapons.Add(primary2Box.Text);
+                Form1.newCharacter.clickedWeapons.Add(primary2Box.Text);
+            }
+            else if (primary2Button.Checked && Form1.newCharacter.type == "Paladin")
+            {
+                Form1.newCharacter.clickedWeapons.Add(primary2Box.Text);
+                Form1.newCharacter.clickedWeapons.Add(primary2Box.Text);
+            }
+            else if (primary2Button.Checked && Form1.newCharacter.type == "Ranger")
             {
                 Form1.newCharacter.clickedWeapons.Add(primary2Box.Text);
                 Form1.newCharacter.clickedWeapons.Add(primary2Box.Text);
